@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 75%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    background-color: aqua;
+}
+
+label,input{
+    padding: 5px;
+}
+
+
+
+
+
+
+
+
