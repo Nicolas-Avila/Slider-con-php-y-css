@@ -10,12 +10,51 @@ form{
     max-width: 600px;
     margin: auto;
     text-align: center;
-    background-color: aqua;
+    align-items: center;
+    background-color: rgb(86, 92, 178);
+    
+    
 }
 
-label,input{
-    padding: 5px;
+label, #boto{
+    
+    font-size: 14px;
+    font-weight: 600px;
+    color: #fff;
+    background-color: #106BA0;
+    display: inline-block;
+    cursor: pointer;
+    padding: 15px 40px !important;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+    border: black 5px solid;
+    margin: 10px;
+    box-shadow: 5px 5px 5px  black;
+    border-radius: 10px;
+      
+    
 }
+label{
+    width: 90%;
+    max-width: 600px;
+    
+}
+label:hover{
+    font-weight: bold;
+}
+#boto:hover{
+    background-color: greenyellow;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.ingresa{
+    display: none; 
+    }
+
 
 
 
