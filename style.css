@@ -1,49 +1,60 @@
-*{
+* {
     box-sizing: border-box;
+    background-color: rgb(86, 92, 189);
 }
 
-form{
+.disclaimer {
+    display: none;
+}
+
+form {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 75%;
-    max-width: 600px;
+    max-width: 95%;
     margin: auto;
     text-align: center;
     align-items: center;
-    background-color: rgb(86, 92, 178);
-    
-    
+    background-color: rgb(78, 83, 153);
+    border-radius: 20px 20px 0px 0px;
+    border: black 5px solid;
+
+
 }
 
-label, #boto{
-    
+.formlabel,
+#boto {
+
     font-size: 14px;
     font-weight: 600px;
     color: #fff;
     background-color: #106BA0;
     display: inline-block;
     cursor: pointer;
-    padding: 15px 40px !important;
+    padding: 15px 40px ;
     text-transform: uppercase;
     width: fit-content;
     text-align: center;
     border: black 5px solid;
     margin: 10px;
-    box-shadow: 5px 5px 5px  black;
+    box-shadow: 5px 5px 5px black;
     border-radius: 10px;
-      
-    
+    margin-bottom: 15px;
+
+
 }
-label{
+
+.formlabel {
     width: 90%;
     max-width: 600px;
-    
+
 }
-label:hover{
+
+.formlabel:hover {
     font-weight: bold;
 }
-#boto:hover{
+
+#boto:hover {
     background-color: greenyellow;
     color: black;
     font-weight: bold;
@@ -51,15 +62,167 @@ label:hover{
 
 
 
-.ingresa{
-    display: none; 
+.ingresa {
+    display: none;
+}
+
+
+/* slider */
+.slider-todo {
+    max-width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border: black 5px solid;
+    border-top: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0px 0px 20px 20px;
+    
+}
+.tituloslider{
+    text-align: center;
+    max-width: 95%;
+    margin: auto;
+    display: block;
+    border-left:black 5px solid ;
+    border-right: black 5px solid;
+    background: rgba(255, 255, 255, 0.2);
+}
+img{
+    max-width: 100%;
+}
+
+.img1 {
+    
+    width: 33rem;
+    height: 20em;
+    
+}
+
+.container-all {
+    position: relative;
+    max-width: 33rem;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    border: black 5px solid;
+    box-shadow: 10px 5px 5px black;
+}
+
+.slide {
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    animation-name: autoplay;
+    transition: all 5s;
+     animation-duration:  13s;
+     animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+   
+   
+}
+
+.item-slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+.pagination {
+    margin: 10px;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: none;
+
+}
+
+.pagination-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid rgb(53, 51, 51);
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 100px;
+    margin: 0 10px 0;
+    text-align: center;
+    transition:  600ms;
+}
+
+.pagination-item:hover {
+    transform: scale(2.3);
+}
+
+.pagination-item img {
+    display: inline-block;
+    max-width: none;
+    height: 100%;
+    transform: scale(1);
+    opacity: 0;
+    /* transition:  1ms; */
+    
+}
+
+.pagination-item:hover img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+input[id="1"]:checked~.slide {
+    animation: none;
+    transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked~.pagination .pagination-item[for="1"] {
+    background: #fff;
+}
+
+input[id="2"]:checked~.slide {
+    animation: none;
+    transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked~.pagination .pagination-item[for="2"] {
+    background: #fff;
+}
+
+
+input[id="3"]:checked~.slide {
+    animation: none;
+    transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked~.pagination .pagination-item[for="3"] {
+    background: #fff;
+}
+
+
+@keyframes autoplay {
+    33% {
+        transform: translate3d(calc(-100% * 0), 0, 0);
     }
 
+    66% {
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
 
-
-
-
-
-
-
-
+    100% {
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+}
